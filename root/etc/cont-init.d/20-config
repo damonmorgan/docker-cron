@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bash
+
+# copy example crontab
+[[ ! -f /cron/crontab ]] && cp \
+  /defaults/crontab /cron/crontab
+
+# copy example script
+[[ ! -f /scripts/example.sh ]] && cp \
+  /defaults/example.sh /scripts/example.sh
+
+# permissions
+chown abc:abc \
+  /scripts/* \
+
+chmod 755 /scripts/*
+
+cp /cron/crontab /etc/crontabs/root
