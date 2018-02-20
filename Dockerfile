@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.5
+FROM lsiobase/alpine
 MAINTAINER damonmorgan
 
 # install packages
